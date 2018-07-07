@@ -1,0 +1,19 @@
+<div>
+  Title: <%= @question.title %>
+</div>
+
+<div>
+  Content: <%= @question.content %>
+</div>
+
+<div>
+  Date: <%= @question.created_at %>
+</div>
+
+<div>
+  Asked by: <%= @question.user.email %>
+</div>
+
+<div>
+  <%= link_to "Back to questions", questions_path %>
+</div>
