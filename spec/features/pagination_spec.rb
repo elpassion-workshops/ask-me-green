@@ -2,6 +2,7 @@ require 'rails_helper'
 
 
 RSpec.describe 'Pagination for index' do
+  FactoryBot.create(:user)
   FactoryBot.create_list(:question, 25)
   scenario 'User visits index' do
     visit questions_path

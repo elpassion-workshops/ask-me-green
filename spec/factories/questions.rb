@@ -1,8 +1,12 @@
 FactoryBot.define do
 
-  factory :question do
-    sequence(:title) { |n| "question #{n}" }
-    sequence(:content) { |n| "content #{n}" }
+  factory sequence :title do |n|
+    "title#{n}"
+  end
 
+  factory :question do
+    question.title {Factory.next(:title)}
+    question.content 'content'
+    user
   end
 end
