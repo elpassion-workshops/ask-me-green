@@ -2,7 +2,7 @@
 <div class="container pt-3">
   <% @questions.each do |question| %>
     <div class="container question-box">
-      <p><%= link_to question.title, question %></p>
+      <p><%= link_to question.title, question %> <br> Tags: <%= question.tags %></p>
     </div>
   <% end %>
 </div>
