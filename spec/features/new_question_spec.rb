@@ -9,12 +9,12 @@ RSpec.describe 'Logged user creates new question' do
     fill_in 'Password', with: '123456'
     click_button 'Log in'
 
-    expect(page).to have_content 'Ask question'
-
-    expect(current_path).to eq ask_question_path
+    click_link 'Ask question'
 
     fill_in 'Title', with: 'Test title'
     fill_in 'Content', with: 'Test content'
+
+    click_button 'Create Question'
 
     expect(page).to have_content 'Question successfully created'
 
