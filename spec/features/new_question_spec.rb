@@ -12,5 +12,11 @@ RSpec.describe 'Logged user creates new question' do
     expect(page).to have_content 'Ask question'
 
     expect(current_path).to eq ask_question_path
+
+    fill_in 'Title', with: 'Test title'
+    fill_in 'Content', with: 'Test content'
+
+    expect(page).to have_content 'Question successfully created'
+
   end
 end
